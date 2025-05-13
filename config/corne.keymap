@@ -3,6 +3,15 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 6000  // default: 600
+#define ZMK_MOUSE_DEFAULT_MOVE_VAL 6000
+#define U_MOUSE_MOVE_DELAY 0
+
+&mmv {
+    time-to-max-speed-ms = <300>; // default: 300
+    acceleration-exponent = <1>; // default: 1
+};
+
 / {
             keymap {
                     compatible = "zmk,keymap";
