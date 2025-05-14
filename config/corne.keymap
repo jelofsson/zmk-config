@@ -2,6 +2,51 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/pointing.h>
+#include <dt-bindings/zmk/modifiers.h>
+
+#define SE_AE    SEMICOLON       // Æ
+#define SE_OE    SINGLE_QUOTE    // Ø
+#define SE_AA    LEFT_BRACKET    // Å
+#define SE_QUOT  DOUBLE_QUOTES   // "
+#define SE_PLUS  EQUALS          // +
+#define SE_MINS  MINUS           // -
+#define SE_SCLN  SEMICOLON       // ;
+#define SE_COLN  COLON           // :
+#define SE_UNDS  UNDERSCORE      // _
+#define SE_COMM  COMMA           // ,
+#define SE_DOT   PERIOD          // .
+#define SE_LPRN  LEFT_PAREN      // (
+#define SE_RPRN  RIGHT_PAREN     // )
+#define SE_LCBR  LEFT_CURLY_BRACE  // {
+#define SE_RCBR  RIGHT_CURLY_BRACE // }
+#define SE_PIPE  PIPE            // |
+#define SE_AMPR  AMPERSAND       // &
+#define SE_HASH  HASH            // #
+#define SE_AT    ALTGR(DIGIT2)      // @ on AltGr + 2
+#define SE_DLR   ALTGR(DIGIT4)      // $ on AltGr + 4
+#define SE_EURO  ALTGR(DIGIT5)      // € on AltGr + 5
+#define SE_LCBR  ALTGR(DIGIT7)      // { on AltGr + 7
+#define SE_RCBR  ALTGR(DIGIT0)      // } on AltGr + 0
+#define SE_LBKT  ALTGR(DIGIT8)      // [ on AltGr + 8
+#define SE_RBKT  ALTGR(DIGIT9)      // ] on AltGr + 9
+#define SE_PIPE  ALTGR(DIGIT1)      // | on AltGr + 1
+#define SE_BSLS  ALTGR(MINUS)       // \ on AltGr + -
+#define SE_SCLN  ALTGR(COMMA)       // ; on AltGr + ,
+#define SE_COLN  ALTGR(PERIOD)      // : on AltGr + .
+#define SE_LESS  SHIFT(COMMA)       // < on Shift + ,
+#define SE_GRTR  SHIFT(PERIOD)      // > on Shift + .
+#define SE_QMARK  SHIFT(MINUS)      // ? on Shift + -
+#define SE_EXLM  SHIFT(DIGIT1)      // ! on Shift + 1
+#define SE_DQUO  SHIFT(DIGIT2)      // " on Shift + 2
+#define SE_TILD  SHIFT(DIGIT3)     // ~ on Shift + 3
+#define SE_PRCNT SHIFT(DIGIT5)      // % on Shift + 5
+#define SE_CIRC  SHIFT(DIGIT6)     // ^ on Shift + 6
+#define SE_FSLH  SHIFT(DIGIT7)     // / on Shift + 7
+#define SE_LPAR  SHIFT(DIGIT8)     // ( on Shift + 8
+#define SE_RPAR  SHIFT(DIGIT9)     // ) on Shift + 9
+#define SE_EQL   SHIFT(DIGIT0)     // = in Shift + 0
+#define SE_ASTRK SHIFT(SE_QUOT)     // ) on Shift + 9
+
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 2250  // default: 600
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 2250
@@ -19,9 +64,9 @@
         default_layer {
             display-name = "COLMAK";
             bindings = <
-                &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp LBKT &kp ESC
-                &kp LSHFT &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SQT
-                &kp LCTRL &kp X &kp C &kp D &kp V &kp Z   &kp K &kp H  &kp COMMA &kp DOT &kp SEMI &kp FSLH
+                &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SE_AA &kp ESC
+                &kp LSHFT &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O    &kp SE_AE
+                &kp LCTRL &kp X &kp C &kp D &kp V &kp Z   &kp K &kp H  &kp SE_COMM &kp SE_DOT &kp SE_OE &kp SE_FSLH
                                   &kp LGUI &mo 1 &kp SPACE   &kp BSPC &mo 2 &kp RET
             >;
         };
@@ -39,9 +84,9 @@
         raise_layer {
             display-name = "SYMBOL";
         bindings = <
-        &kp TAB    &kp SQT      &kp LBKT     &kp RBKT     &kp DQT      &kp DOT        &kp AMPS  &kp COLON &kp LBRC &kp RBRC &kp PRCNT &kp ESC
-            &kp LSHFT  &kp EXCL     &kp MINUS    &kp PLUS     &kp EQUAL    &kp HASH       &kp PIPE  &kp COLON &kp LPAR &kp RPAR &kp QMARK &kp ASTRK
-            &kp LCTRL  &kp CARET    &kp HASH     &kp APOS     &kp GRAVE     &kp TILDE      &kp TILDE &kp DLLR  &kp LBKT &kp RBKT &kp AT    &kp FSLH
+        &kp TAB    &kp SE_QUOT      &kp SE_LBKT     &kp SE_RBKT     &kp SE_DQUO      &kp SE_DOT        &kp SE_AMPR  &kp SE_COLN &kp SE_LBKT &kp SE_RBKT &kp SE_PRCNT &kp ESC
+            &kp LSHFT  &kp SE_EXLM     &kp SE_MINS    &kp SE_PLUS   &kp EQUAL    &kp SE_HASH       &kp SE_PIPE  &kp SE_COLN &kp SE_LPAR &kp SE_RPAR &kp SE_QMARK &kp SE_ASTRK
+            &kp LCTRL  &kp CARET    &kp HASH     &kp APOS     &kp GRAVE     &kp TILDE      &kp SE_TILD &kp DLLR  &kp LBKT &kp RBKT &kp AT    &kp FSLH
                                      &kp LGUI     &mo 3        &kp SPACE    &kp BSPC       &trans    &kp RET
         >;
     };
