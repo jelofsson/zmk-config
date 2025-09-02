@@ -6,6 +6,8 @@ manifest:
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
     - name: urob
       url-base: https://github.com/urob
+    - name: joelspadin
+      url-base: https://github.com/joelspadin
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -14,5 +16,8 @@ manifest:
     - name: zmk-unicode
       remote: urob
       revision: v0.3 # set to same as ZMK version above
+    - name: zmk-locales
+      remote: joelspadin
+      revision: v1.1.0
   self:
     path: config
