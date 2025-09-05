@@ -56,9 +56,9 @@
     adjust_layer {
         display-name = "ADJUST";
         bindings = <
-            &bootloader &trans &trans       &trans       &trans       &trans         &trans    &trans    &trans   &trans    &trans   &trans
+            &bootloader &trans &trans       &trans       &trans       &trans         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3   &trans    &bt BT_CLR
             &kp CAPS    &trans    &trans    &trans     &trans       &trans         &trans    &trans    &trans   &trans    &trans   &uc UC_SET_WIN_COMPOSE
-            &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &trans       &bt BT_CLR         &tog 4     &trans    &trans   &trans    &trans   &uc UC_SET_LINUX
+            &tog 4      &trans    &trans    &trans     &trans       &trans         &trans    &trans    &trans   &trans    &trans   &uc UC_SET_LINUX
                                      &kp LGUI     &trans       &kp SPACE    &kp BSPC       &trans    &kp RET
         >;
     };
@@ -66,11 +66,10 @@
     osrs_layer {
         display-name = "OSRS";
         bindings = <
-            // Left half
-            &kp ESC   &kp F4    &kp F5    &kp F6    &kp F7    &kp F8         &kp F8    &kp F4    &kp F5    &kp F6    &kp F7    &kp ESC
-            &trans    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp COLON      &trans  &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp COLON
-            &kp TAB   &kp N1    &kp N2    &kp N3    &kp N4    &kp N5         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp ESC
-                                &kp LGUI  &trans    &kp SPACE &mkp LCLK    &tog 0 &mkp RCLK
+            &kp ESC   &kp F4    &kp F5    &kp F6    &kp F7    &kp F8         &kp F9    &kp F10   &kp F11   &kp F12   &trans    &kp ESC
+            &trans    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT &kp COLON      &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &trans
+            &tog 4    &kp N1    &kp N2    &kp N3    &kp N4    &kp N5         &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp ESC
+                                    &kp LGUI  &trans    &kp SPACE &mkp LCLK    &trans &mkp RCLK
              >;
         };
     };
