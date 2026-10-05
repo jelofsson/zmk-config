@@ -58,7 +58,7 @@
         bindings = <
             &bootloader &trans &trans       &trans       &trans       &trans         &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3   &trans    &bt BT_CLR
             &kp CAPS    &trans    &trans    &trans     &trans       &trans         &trans    &trans    &trans   &trans    &trans   &uc UC_SET_WIN_COMPOSE
-            &tog 4      &trans    &trans    &trans     &trans       &trans         &trans    &trans    &trans   &trans    &trans   &uc UC_SET_LINUX
+            &tog 4      &tog 5    &trans    &trans     &trans       &trans         &trans    &trans    &trans   &trans    &trans   &uc UC_SET_LINUX
                                      &kp LGUI     &trans       &kp SPACE    &kp BSPC       &trans    &kp RET
         >;
     };
@@ -72,5 +72,27 @@
                                     &kp LGUI  &trans    &kp SPACE &mkp LCLK    &trans &mkp RCLK
              >;
         };
+
+    // SC2 Protoss, left hand only. Enter via ADJUST (&tog 5); hold thumb 3 for grid hotkeys, press its middle thumb to exit.
+    sc2_layer {
+        display-name = "SC2";
+        bindings = <
+            &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6         &trans &trans &trans &trans &trans &trans
+            &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6         &trans &trans &trans &trans &trans &trans
+            &kp LCTRL &kp A     &kp M     &kp S     &kp H     &kp P          &trans &trans &trans &trans &trans &trans
+                                    &kp LSHFT &kp SPACE &mo 6       &trans &trans &trans
+        >;
     };
+
+    // Held from SC2: QWERTY-position grid for building/unit hotkeys (Probe E, Zealot Z, Stalker D, Nexus/Gateway via B/V menus...)
+    sc2_grid_layer {
+        display-name = "SC2GRID";
+        bindings = <
+            &kp ESC   &kp Q     &kp W     &kp E     &kp R      &kp T          &trans &trans &trans &trans &trans &trans
+            &kp LSHFT &kp A     &kp S     &kp D     &kp F      &kp G          &trans &trans &trans &trans &trans &trans
+            &kp LCTRL &kp Z     &kp X     &kp C     &kp V      &kp B          &trans &trans &trans &trans &trans &trans
+                                    &kp LALT  &tog 5    &trans        &trans &trans &trans
+        >;
+    };
+};
 };
