@@ -77,10 +77,10 @@
     sc2_layer {
         display-name = "SC2";
         bindings = <
-            &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6         &trans &trans &trans &trans &trans &trans
-            &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6         &trans &trans &trans &trans &trans &trans
-            &kp LCTRL &kp A     &kp M     &kp S     &kp H     &kp P          &trans &trans &trans &trans &trans &trans
-                                    &kp LSHFT &kp SPACE &mo 6       &trans &trans &trans
+            &kp ESC   &kp Q     &kp W     &kp E     &kp R      &kp T          &trans &trans &trans &trans &trans &trans
+            &kp LSHFT &kp A     &kp S     &kp D     &kp F      &kp G          &trans &trans &trans &trans &trans &trans
+            &kp LCTRL &kp Z     &kp X     &kp C     &kp V      &kp B          &trans &trans &trans &trans &trans &trans
+                                    &kp TAB &kp SPACE &mo 6       &trans &trans &trans
         >;
     };
 
@@ -88,9 +88,9 @@
     sc2_grid_layer {
         display-name = "SC2GRID";
         bindings = <
-            &kp ESC   &kp Q     &kp W     &kp E     &kp R      &kp T          &trans &trans &trans &trans &trans &trans
-            &kp LSHFT &kp A     &kp S     &kp D     &kp F      &kp G          &trans &trans &trans &trans &trans &trans
-            &kp LCTRL &kp Z     &kp X     &kp C     &kp V      &kp B          &trans &trans &trans &trans &trans &trans
+            &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6         &trans &trans &trans &trans &trans &trans
+            &kp N1    &kp N2    &kp N3    &kp N4    &kp N5    &kp N6         &trans &trans &trans &trans &trans &trans
+            &kp Y     &kp A     &kp M     &kp S     &kp H     &kp P          &trans &trans &trans &trans &trans &trans
                                     &kp LALT  &tog 5    &trans        &trans &trans &trans
         >;
     };
